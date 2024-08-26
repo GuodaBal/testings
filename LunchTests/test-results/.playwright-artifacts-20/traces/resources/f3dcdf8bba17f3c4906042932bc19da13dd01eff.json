@@ -1,1 +1,0 @@
-{"operationName":"DayQuery","variables":{"dayOfWeek":"monday","$cityId":2,"$languageId":2},"query":"query DayQuery($dayOfWeek: DayOfWeek!) {\n  day(dayOfWeek: $dayOfWeek) {\n    orderUntil\n    appliedDiscount\n    isFreeOfCharge\n    providers {\n      id\n      __typename\n    }\n    __typename\n  }\n}\n"}

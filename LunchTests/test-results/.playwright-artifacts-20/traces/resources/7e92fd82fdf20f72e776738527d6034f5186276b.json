@@ -1,1 +1,0 @@
-{"operationName":null,"variables":{"email":"guoda.baltutyte@sft.com","password":"student330","$cityId":1,"$languageId":1},"query":"mutation ($email: String!, $password: String!) {\n  loginPassword(email: $email, password: $password) {\n    email\n    admin\n    displayName\n    id\n    jwt\n    __typename\n  }\n}\n"}

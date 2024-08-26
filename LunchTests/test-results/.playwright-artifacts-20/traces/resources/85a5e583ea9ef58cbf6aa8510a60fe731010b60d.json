@@ -1,1 +1,0 @@
-{"operationName":"SaveUserSelectionsMutation","variables":{"dishIds":[60972],"dayOfWeek":"monday","$cityId":2,"$languageId":2},"query":"mutation SaveUserSelectionsMutation($dayOfWeek: DayOfWeek!, $dishIds: [Int]!) {\n  saveDishes(dishIds: $dishIds, dayOfWeek: $dayOfWeek)\n}\n"}

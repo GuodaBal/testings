@@ -1,1 +1,0 @@
-{"operationName":"DaysQuery","variables":{"$cityId":2,"$languageId":2},"query":"query DaysQuery {\n  days {\n    userHasOrder\n    dayOfWeek\n    orderUntil\n    providers {\n      color\n      name\n      __typename\n    }\n    __typename\n  }\n}\n"}
