@@ -5,6 +5,7 @@ import { test, expect } from "@playwright/test";
 test("Create new computer", async ({ page }) => {
   await page.goto("https://lunch.devbstaging.com/login-password");
 
-  await page.locator("#password").fill("ABC");
+  await page.getByLabel("email").fill("ABC");
+  
   expect(1).toBe(1);
 });
