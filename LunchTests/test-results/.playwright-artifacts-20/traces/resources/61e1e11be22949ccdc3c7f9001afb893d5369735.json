@@ -1,0 +1,1 @@
+{"operationName":"DishesToRateQuery","variables":{"$cityId":1,"$languageId":1},"query":"query DishesToRateQuery {\n  dishesToRate {\n    date\n    promptForRating\n    dishes {\n      id\n      isSoup\n      title\n      __typename\n    }\n    __typename\n  }\n}\n"}

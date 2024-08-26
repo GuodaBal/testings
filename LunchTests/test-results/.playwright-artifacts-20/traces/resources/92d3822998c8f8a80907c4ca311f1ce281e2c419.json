@@ -1,0 +1,1 @@
+{"operationName":null,"variables":{"$cityId":1,"$languageId":1},"query":"{\n  currentUser {\n    cityId\n    preferredLanguageId\n    displayName\n    __typename\n  }\n}\n"}
