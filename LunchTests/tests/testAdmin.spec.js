@@ -45,7 +45,7 @@ test("Add provider", async ({ page }) => {
     }
 });
 
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(2000);
     await page.evaluate(() => {
         var button = Array.from(document.querySelectorAll('button')).find(b => b.textContent.includes('add'));
         if (button) {
@@ -56,14 +56,14 @@ test("Add provider", async ({ page }) => {
     //fill in details
     await page.getByRole('combobox', { name: 'Provider Name' }).fill(providerName);
     await page.getByRole('combobox', { name: 'Color' }).click();
-    await page.waitForTimeout(5000);
+    await page.waitForTimeout(2000);
     await page.evaluate(() => {
         const link = Array.from(document.querySelectorAll('a')).find(a => a.textContent.includes('Red'));
         if (link) {
           link.click();
         }
       });
-      await page.waitForTimeout(5000);
+      await page.waitForTimeout(2000);
 
       await page.waitForSelector('role=spinbutton[name="Price"]');
       await page.getByRole('spinbutton', { name: 'Price' }).fill(price);
@@ -95,10 +95,11 @@ test("Add provider", async ({ page }) => {
       await page.getByRole('textbox', { name: 'Translation' }).fill(translation2);
 
       //save
+      await page.waitForSelector('role=button[name="Save"]');
       await page.getByRole('button', { name: 'Save' }).click();
-      await page.waitForTimeout(5000);
+      await page.waitForTimeout(2000);
 
-      //await expect(page.content()).toContain(providerName);
+      await expect(page.content()).toContain(providerName);
       
     
     
